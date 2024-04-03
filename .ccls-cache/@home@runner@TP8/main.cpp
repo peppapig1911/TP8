@@ -1,37 +1,46 @@
 #include <iostream>
-#include <vector>
-
 using namespace std;
 
-// Fonction pour afficher le plateau
-void afficherPlateau(const vector<vector<char>>& plateau) {
-    for (const auto& ligne : plateau) {
-        for (char casePlateau : ligne) {
-            cout << "|--" << casePlateau;
-        }
-        cout << "|" << endl;
+class Plateau {
+    protected:
 
-        for (char casePlateau : ligne) {
-          cout << "|  " << casePlateau;
+        int nbligne;
+        int nbcolonne;
+        typedef char plateau[100][100]; //on fixe une taille maximale pour le plateau
+    
+    public:
+
+        //constructeur 
+        Plateau(int lignes, int colonnes) : nbligne(lignes), nbcolonne(colonnes){      
         }
-        cout << "|" << endl;
-    }
-}
+    
+        //fonction pour afficher le plateau
+        void AfficherPlateau(plateau plateau){
+            for (int i=0; i<nbligne; ++i) {
+                for (int j=0; j<nbcolonne; ++j) {
+                    cout << "|   "; // Remplacer par une représentation vide pour chaque cellule
+                }
+                cout << "|" << endl;
+    
+                for (int j=0; j<nbcolonne; ++j) {
+                    cout << "|---"; // Ligne de séparation entre les lignes
+                }
+                cout << "|" << endl;
+            }
+        }
+};
+
 
 int main() {
-    // Taille du plateau
-    int x, y;
-    cout << "Entrez le nombre de lignes (x) : ";
-    cin >> x;
-    cout << "Entrez le nombre de colonnes (y) : ";
-    cin >> y;
+  
+    int lignes, colonnes;
+    cout<<"Entrez le nombre de lignes : ";
+    cin>>lignes;
+    cout<<"Entrez le nombre de colonnes : ";
+    cin>>colonnes;
 
-    // Initialisation du plateau
-    vector<vector<char>> plateau(x, vector<char>(y, '-'));
-
-    // Affichage du plateau initial
-    cout << "Plateau initial :" << endl;
-    afficherPlateau(plateau);
-
+    Plateau plateau(lignes, colonnes);
+    plateau.AfficherPlateau({});
     return 0;
+  
 }
