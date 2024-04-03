@@ -1,6 +1,7 @@
 #include "animal.h"
 #include <stdlib.h>
 #include <vector>
+#include <ctime>
 using namespace std; 
 
 class Lion : public Animal{

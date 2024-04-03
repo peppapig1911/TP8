@@ -1,6 +1,7 @@
 #include "animal.h"
 #include "plateau.h"
 #include <vector>
+#include <ctime>
 
 class Loup: public Animal{
 
@@ -50,7 +51,7 @@ class Loup: public Animal{
        else if (y>maxY){ //en bas
           y=1;
        }
-      cout<<x<<" "<<y<<endl;
+
     }
     
 };

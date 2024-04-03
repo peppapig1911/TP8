@@ -1,6 +1,7 @@
 #include "animal.h"
 #include "plateau.h"
 #include <vector>
+#include <ctime>
 
 class Loup: public Animal{
 

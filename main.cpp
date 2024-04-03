@@ -1,5 +1,6 @@
 #include <iostream>
 #include "plateau.h"
+#include <ctime>
 using namespace std;
 
 

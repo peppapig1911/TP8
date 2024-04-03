@@ -1,4 +1,5 @@
 #include "animal.h"
+#include <ctime>
 
 class Ours: public Animal{
 
