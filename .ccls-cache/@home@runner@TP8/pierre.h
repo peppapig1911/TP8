@@ -3,6 +3,12 @@
 class Pierre: public Animal{
 
   public :
-    void setAttaque();
-    void deplace(int maxX, int maxY);
+
+    //la pierre n'attaque qu'avec pierre 
+    void setAttaque(){
+      typeAttaque=Attaque(0);
+    };
+
+
+    void deplace(int maxX, int maxY); //non défini car la pierre ne se déplace pas 
 };
