@@ -24,7 +24,7 @@ int main() {
 
     //initiation du plateau
   
-    Plateau plateau(lignes, colonnes);
+    Plateau plateau(lignes, colonnes, Nb_par_animal);
     plateau.AfficherPlateau({});
     return 0;
   
