@@ -7,7 +7,12 @@ using namespace std;
 void afficherPlateau(const vector<vector<char>>& plateau) {
     for (const auto& ligne : plateau) {
         for (char casePlateau : ligne) {
-            cout << "|_" << casePlateau << "";
+            cout << "|--" << casePlateau;
+        }
+        cout << "|" << endl;
+
+        for (char casePlateau : ligne) {
+          cout << "|  " << casePlateau;
         }
         cout << "|" << endl;
     }
@@ -22,7 +27,7 @@ int main() {
     cin >> y;
 
     // Initialisation du plateau
-    vector<vector<char>> plateau(x, vector<char>(y, '_'));
+    vector<vector<char>> plateau(x, vector<char>(y, '-'));
 
     // Affichage du plateau initial
     cout << "Plateau initial :" << endl;

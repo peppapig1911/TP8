@@ -1,6 +1,6 @@
 #include "animal.h"
 
-class Pierre{
+class Pierre: public Animal{
 
   public :
     void setAttaque();
